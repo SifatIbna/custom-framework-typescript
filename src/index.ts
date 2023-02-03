@@ -5,11 +5,4 @@ const user = new User({
   age: -1,
 });
 
-// user.set({ name: "update name", age: 1000 });
-// user.save();
-
-user.events.on("change", () => {
-  console.log("changes");
-});
-
-user.events.trigger("change");
+console.log(user.get("name"));
