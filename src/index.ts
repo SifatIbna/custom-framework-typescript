@@ -1,7 +1,9 @@
 import { User } from "./models/User";
 
 const user = new User({
-  id: 1,
+  name: "new record",
+  age: -1,
 });
 
-user.fetch();
+user.set({ name: "update name", age: 1000 });
+user.save();
